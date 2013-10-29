@@ -1,13 +1,13 @@
 Summary:	General-purpose data compression software
 Name:		xz
-Version:	5.1.2
-Release:	4
+Version:	5.1.3
+Release:	1
 Epoch:		1
 License:	LGPL v2.1+, helper scripts on GPL v2+
 Group:		Applications/Archiving
 # git d05d6d65c41a4bc83f162fa3d67c5d84e8751634
 Source0:	http://tukaani.org/xz/%{name}-%{version}alpha.tar.gz
-# Source0-md5:	9bad1e249537ce69b206815cf28ca87b
+# Source0-md5:	bbb2daa876c87fb2cf9fe4590af9694e
 URL:		http://tukaani.org/xz/
 BuildRequires:	autoconf
 BuildRequires:	automake
