@@ -1,13 +1,13 @@
 Summary:	General-purpose data compression software
 Name:		xz
-Version:	5.1.3
-Release:	3
+Version:	5.2.0
+Release:	1
 Epoch:		1
 License:	LGPL v2.1+, helper scripts on GPL v2+
 Group:		Applications/Archiving
 # git d05d6d65c41a4bc83f162fa3d67c5d84e8751634
-Source0:	http://tukaani.org/xz/%{name}-%{version}alpha.tar.gz
-# Source0-md5:	bbb2daa876c87fb2cf9fe4590af9694e
+Source0:	http://tukaani.org/xz/%{name}-%{version}.tar.gz
+# Source0-md5:	be585bdf8672e4406632eda3d819e284
 URL:		http://tukaani.org/xz/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -38,7 +38,7 @@ Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
 Header file for LZMA library.
 
 %prep
-%setup -qn %{name}-%{version}alpha
+%setup -q
 
 %build
 %{__autopoint}
@@ -56,6 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/xz
 
 %find_lang %{name}
 
